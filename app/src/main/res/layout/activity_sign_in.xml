@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sgin_Up_Activity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".Sign_In_Activity">
 
+    <View
+        android:id="@+id/arrow"
+        android:layout_width="40dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/arrow_login"
+        android:elevation="8dp" />
 
     <View
         android:id="@+id/logo"
@@ -19,61 +27,18 @@
         android:elevation="8dp" />
 
     <View
-        android:id="@+id/arrow"
-        android:layout_width="40dp"
-        android:layout_height="32dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/arrow_login"
-        android:elevation="8dp" />
-
-    <View
-        android:id="@+id/Sign_up"
+        android:id="@+id/Sign_in"
         android:layout_width="95dp"
         android:layout_height="28dp"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/sign_up_text" />
-
-
-    <TextView
-        android:id="@+id/Create"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Sign_up"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="Create your new account"
-        android:textColor="#5F605F"/>
-
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="352dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Create"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:radius="20dp"
-        android:hint="Fullname"
-        android:paddingLeft="60dp"
-        android:background="#ebfdf2"
-        />
-
-    <ImageView
-        android:id="@+id/Userpic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Create"
-        android:layout_marginTop="37dp"
-        android:layout_marginRight="-40dp"
-        android:layout_toLeftOf="@id/Username"
-        app:srcCompat="@drawable/username" />
+        android:background="@drawable/sign_in_text" />
 
     <EditText
         android:id="@+id/Mail"
         android:layout_width="352dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/Username"
+        android:layout_below="@+id/Sign_in"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:radius="20dp"
@@ -82,18 +47,15 @@
         android:background="#ebfdf2"
         />
 
-
-
     <ImageView
         android:id="@+id/Mailpic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Username"
+        android:layout_below="@+id/Sign_in"
         android:layout_marginTop="37dp"
         android:layout_marginRight="-44dp"
-        android:layout_toLeftOf="@id/Username"
+        android:layout_toLeftOf="@id/Mail"
         app:srcCompat="@drawable/mail" />
-
 
     <EditText
         android:id="@+id/Pass"
@@ -115,83 +77,41 @@
         android:layout_below="@+id/Mail"
         android:layout_marginTop="37dp"
         android:layout_marginRight="-44dp"
-        android:layout_toLeftOf="@id/Username"
+        android:layout_toLeftOf="@id/Mail"
         app:srcCompat="@drawable/pass" />
 
-    <EditText
-        android:id="@+id/Confirm"
-        android:layout_width="352dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Pass"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:radius="20dp"
-        android:hint="Confirm Password"
-        android:paddingLeft="60dp"
-        android:background="#ebfdf2"
-        />
-
-
-    <ImageView
-        android:id="@+id/Confirmpic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Pass"
-        android:layout_marginTop="37dp"
-        android:layout_marginRight="-44dp"
-        android:layout_toLeftOf="@id/Username"
-        app:srcCompat="@drawable/pass" />
-
-<!--    <CheckBox-->
-<!--        tools:ignore="MissingPrefix"-->
-<!--        android:id="@+id/checkBox"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="50dp"-->
-<!--        android:layout_below="@+id/Confirm"-->
-<!--        android:text="I understood the "/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/Policy"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/Confirm"-->
-<!--        android:layout_toRightOf="@id/checkBox"-->
-<!--        android:layout_marginTop="14dp"-->
-<!--        android:text="term &amp; policy."-->
-<!--        android:textColor="#118844"-->
-<!--        />-->
 
     <RelativeLayout
         android:id="@+id/groupCB"
-        android:layout_width="wrap_content"
+        android:layout_width="352dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Confirm"
-        >
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Pass"
+        android:layout_centerHorizontal="true">
 
         <CheckBox
-            tools:ignore="MissingPrefix"
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I understood the " />
+            android:text="Remember me"
+            tools:ignore="MissingPrefix" />
 
         <TextView
             android:id="@+id/Policy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/checkBox"
-
-            android:text="term &amp; policy."
             android:layout_marginTop="14dp"
+            android:layout_alignParentEnd="true"
+            android:text="Forget Password?"
             android:textColor="#118844" />
     </RelativeLayout>
+
+
     <Button
-        android:id="@+id/buttonSignUp"
+        android:id="@+id/buttonSignIn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
+        android:text="SIGN IN"
         android:textColor="#FFFFFF"
         android:backgroundTint="#4CAF50"
         android:padding="12dp"
@@ -205,9 +125,9 @@
         android:id="@+id/Lineleft"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSignUp"
+        android:layout_below="@+id/buttonSignIn"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"
 
         android:layout_toLeftOf="@id/Continue"
@@ -217,9 +137,9 @@
         android:id="@+id/Continue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSignUp"
+        android:layout_below="@+id/buttonSignIn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Or Continue With"
         android:textColor="#5F605F"/>
 
@@ -227,11 +147,9 @@
         android:id="@+id/Lineright"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSignUp"
-
-        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonSignIn"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
-
         android:layout_toRightOf="@id/Continue"
         app:srcCompat="@drawable/line" />
 
@@ -241,7 +159,7 @@
         android:layout_height="60dp"
         android:layout_below="@+id/Continue"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="20dp">
 
 
         <androidx.cardview.widget.CardView
@@ -286,26 +204,29 @@
 
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
-    <TextView
-        android:id="@+id/Have1"
+
+
+    <RelativeLayout
+        android:id="@+id/groupHave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/groupContinue"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="10dp"
-        android:text="Have an account?"
-        android:textColor="#5F605F"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/Have1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have an account?"
+            android:textColor="#5F605F"/>
 
-    <TextView
-        android:id="@+id/Have2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/groupContinue"
-        android:layout_toRightOf="@id/Have1"
-        android:layout_marginTop="10dp"
-        android:text=" SIGN IN"
-        android:textColor="#118844"
-        />
-
-
+        <TextView
+            android:id="@+id/Have2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/Have1"
+            android:text=" SIGN IN"
+            android:textColor="#118844"
+            />
+    </RelativeLayout>
 </RelativeLayout>
