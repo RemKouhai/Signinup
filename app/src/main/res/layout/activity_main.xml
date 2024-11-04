@@ -142,26 +142,51 @@
         android:layout_toLeftOf="@id/Username"
         app:srcCompat="@drawable/pass" />
 
-    <CheckBox
-        tools:ignore="MissingPrefix"
-        android:id="@+id/checkBox"
+<!--    <CheckBox-->
+<!--        tools:ignore="MissingPrefix"-->
+<!--        android:id="@+id/checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_below="@+id/Confirm"-->
+<!--        android:text="I understood the "/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/Policy"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/Confirm"-->
+<!--        android:layout_toRightOf="@id/checkBox"-->
+<!--        android:layout_marginTop="14dp"-->
+<!--        android:text="term &amp; policy."-->
+<!--        android:textColor="#118844"-->
+<!--        />-->
+
+    <RelativeLayout
+        android:id="@+id/groupCB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/Confirm"
-        android:text="I understood the "/>
+        >
 
-    <TextView
-        android:id="@+id/Policy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Confirm"
-        android:layout_toRightOf="@id/checkBox"
-        android:layout_marginTop="14dp"
-        android:text="term &amp; policy."
-        android:textColor="#118844"
-        />
+        <CheckBox
+            tools:ignore="MissingPrefix"
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I understood the " />
 
+        <TextView
+            android:id="@+id/Policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/checkBox"
+
+            android:text="term &amp; policy."
+            android:layout_marginTop="14dp"
+            android:textColor="#118844" />
+    </RelativeLayout>
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="300dp"
@@ -172,7 +197,7 @@
         android:padding="12dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:layout_below="@+id/Policy"
+        android:layout_below="@+id/groupCB"
         android:layout_centerHorizontal="true"
         />
 
@@ -210,55 +235,62 @@
         android:layout_toRightOf="@id/Continue"
         app:srcCompat="@drawable/line" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewGG"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
+    <RelativeLayout
+        android:id="@+id/groupContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/Continue"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#F4F4F4"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="#F4F4F4">
-
-        <ImageView
-            android:id="@+id/ggpic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/gg"/>
-
-    </androidx.cardview.widget.CardView>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewFB"
-        android:layout_width="94dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/Continue"
-        android:layout_toRightOf="@+id/cardViewGG"
-        android:layout_marginLeft="69dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#F4F4F4"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="8dp"
-        app:cardBackgroundColor="#F4F4F4">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewGG"
+            android:layout_width="94dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F4F4F4"
+            app:cardBackgroundColor="#F4F4F4"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
-        <ImageView
-            android:id="@+id/fbpic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/fb"/>
+            <ImageView
+                android:id="@+id/ggpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/gg" />
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFB"
+            android:layout_width="94dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="69dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/cardViewGG"
+            android:backgroundTint="#F4F4F4"
+            app:cardBackgroundColor="#F4F4F4"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/fbpic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/fb" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
     <TextView
         android:id="@+id/Have1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardViewGG"
+        android:layout_below="@+id/groupContinue"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="10dp"
         android:text="Have an account?"
@@ -268,7 +300,7 @@
         android:id="@+id/Have2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cardViewGG"
+        android:layout_below="@id/groupContinue"
         android:layout_toRightOf="@id/Have1"
         android:layout_marginTop="10dp"
         android:text=" SIGN IN"
