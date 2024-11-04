@@ -207,7 +207,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonSignUp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
 
         android:layout_toLeftOf="@id/Continue"
@@ -219,7 +219,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonSignUp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Or Continue With"
         android:textColor="#5F605F"/>
 
@@ -229,7 +229,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonSignUp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
 
         android:layout_toRightOf="@id/Continue"
@@ -241,7 +241,7 @@
         android:layout_height="60dp"
         android:layout_below="@+id/Continue"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="10dp">
 
 
         <androidx.cardview.widget.CardView
@@ -290,10 +290,10 @@
     <RelativeLayout
         android:id="@+id/groupHave"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/groupContinue"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="10dp">
     <TextView
         android:id="@+id/Have1"
         android:layout_width="wrap_content"
