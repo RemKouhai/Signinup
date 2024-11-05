@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Sign_Up_Activity">
+    tools:context=".Sign_Up_Activity"
+    android:background="#ffffff">
 
 
     <View

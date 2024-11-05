@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
-    tools:context=".Sign_In_Activity">
+    tools:context=".Sign_In_Activity"
+    android:background="#ffffff">
 
     <View
         android:id="@+id/arrow"
