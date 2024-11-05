@@ -11,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Sign_Up_Activity extends AppCompatActivity {
 
-    private Button buttonSignUp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +25,6 @@ public class Sign_Up_Activity extends AppCompatActivity {
             return insets;
         });
 
-        buttonSignUp = findViewById(R.id.buttonSignUp);
-        buttonSignUp.setOnClickListener(v -> {
-            // Chuyển sang Sign_In_Activity
-            Intent intent = new Intent(Sign_Up_Activity.this, Sign_In_Activity.class);
-            startActivity(intent);
-        });
+
     }
 }
